@@ -4,16 +4,18 @@ using UnityEngine.UIElements;
 
 public class DotParameters : MonoBehaviour
 {
-
     void Awake()
     {
-        float scale = Random.Range(0, 5);
-        Color color = new Color(Random.Range(0,255), Random.Range(0, 255), Random.Range(0, 255));
+        int r = Random.Range(0, 2);
+        int g = Random.Range(0, 2);
+        int b = Random.Range(0, 2);
 
-        transform.localScale = new Vector3(scale,scale,1); 
+        float scale = Random.Range(1.0f, 2.0f);
 
-        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        transform.localScale = new Vector3(scale,scale,1);
 
-        spriteRenderer.color = color;
+        Color color = new Color(r, g, b);
+
+        gameObject.GetComponent<SpriteRenderer>().color = color;
     }
 }

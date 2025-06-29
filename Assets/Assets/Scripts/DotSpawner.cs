@@ -6,14 +6,8 @@ public class DotSpawner : MonoBehaviour
 {
     public GameObject Dot;
 
-    //List<GameObject> dots;
-
     private float CountDownSpawner;
     public float MaxCountDownSpawner;
-
-    public DotSpawner()
-    {
-    }
 
     private void Update()
     {
@@ -27,9 +21,8 @@ public class DotSpawner : MonoBehaviour
 
     public void SpawnDot()
     {
-        Vector3 position = new Vector3(Random.Range(0, 10), Random.Range(0, 10), 0);
-        GameObject d = Instantiate(Dot, position, Quaternion.identity);
-        //dots.Add(d);
+        Vector3 randomPosition = new Vector3(Random.Range(-8.0f, 3.0f), Random.Range(-4.0f, 2.0f), 0);
+        Instantiate(Dot, randomPosition, Quaternion.identity);
         CountDownSpawner = MaxCountDownSpawner;
     }
 }

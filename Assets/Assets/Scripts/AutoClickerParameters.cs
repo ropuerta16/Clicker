@@ -6,7 +6,7 @@ public class AutoClickerParameters : MonoBehaviour
 
     void Update()
     {
-        CoolDown -= Time.time;
+        CoolDown -= Time.deltaTime;
         if (CoolDown < 0 )
         {
             Score.Instance.score += AddScore.Instance.Clickvalue;

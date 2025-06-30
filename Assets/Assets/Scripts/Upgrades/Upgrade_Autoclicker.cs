@@ -1,13 +1,16 @@
 using System.Drawing;
 using System.Xml.Linq;
+using TMPro;
 using UnityEngine;
 
 public class Upgrade_Autoclicker : Upgrade
 {
     public GameObject Autoclicker;
-    public Upgrade_Autoclicker()
-    {
+    public TextMeshProUGUI UpNameTxt;
 
+    public void Start()
+    {
+        UpNameTxt.text = name;
     }
 
     public override void AddUpgrades()

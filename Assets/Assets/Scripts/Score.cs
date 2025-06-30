@@ -19,10 +19,11 @@ public class Score : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    private void Start()
+    private void Update()
     {
         ActualizeScore();
     }
+
     public void ActualizeScore()
     {
         scoreTxt.text = "Score:" + score;

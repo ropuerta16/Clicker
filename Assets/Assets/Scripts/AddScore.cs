@@ -7,7 +7,7 @@ public class AddScore : MonoBehaviour
     public static AddScore Instance { get; private set; }
 
     [SerializeField]
-    int Clickvalue;
+    public int Clickvalue;
 
     void Awake()
     {

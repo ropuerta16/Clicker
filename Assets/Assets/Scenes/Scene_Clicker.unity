@@ -483,6 +483,7 @@ GameObject:
   - component: {fileID: 643162935}
   - component: {fileID: 643162934}
   - component: {fileID: 643162933}
+  - component: {fileID: 643162936}
   m_Layer: 5
   m_Name: Autoclicker
   m_TagString: Untagged
@@ -553,7 +554,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 643162934}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 643162936}
+        m_TargetAssemblyTypeName: Upgrade_Autoclicker, Assembly-CSharp
+        m_MethodName: AddUpgrades
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &643162934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -592,6 +605,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643162931}
   m_CullTransparentMesh: 1
+--- !u!114 &643162936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643162931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a70e31e1c09135744825216754fa3c9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Autoclicker
+  prize: 10
+  Autoclicker: {fileID: 6233255214084901674, guid: 8d59204d10ce542468c8827851d59957, type: 3}
 --- !u!1 &781027627
 GameObject:
   m_ObjectHideFlags: 0
@@ -1081,6 +1109,7 @@ GameObject:
   - component: {fileID: 1190621765}
   - component: {fileID: 1190621764}
   - component: {fileID: 1190621763}
+  - component: {fileID: 1190621766}
   m_Layer: 5
   m_Name: AddScore
   m_TagString: Untagged
@@ -1151,7 +1180,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1190621764}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1190621766}
+        m_TargetAssemblyTypeName: Upgrade_AddScore, Assembly-CSharp
+        m_MethodName: AddUpgrades
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1190621764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1190,6 +1231,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1190621761}
   m_CullTransparentMesh: 1
+--- !u!114 &1190621766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190621761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7943626ac2b0a4042857520e544348aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Add Score
+  prize: 10
 --- !u!1 &1198275712
 GameObject:
   m_ObjectHideFlags: 0

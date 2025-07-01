@@ -4,10 +4,12 @@ using UnityEngine;
 public class Upgrade_AddScore : Upgrade
 {
     public TextMeshProUGUI UpNameTxt;
+    public TextMeshProUGUI UpPrizeTxt;
 
     public void Start()
     {
         UpNameTxt.text = name;
+        UpPrizeTxt.text = "" + prize;
     }
     public override void AddUpgrades()
     {
@@ -15,7 +17,9 @@ public class Upgrade_AddScore : Upgrade
         {
 
             Score.Instance.score -= prize;
-            Score.Instance.score += 20;
+            AddScore.Instance.Clickvalue += 1;
+            prize *= 2;
+            UpPrizeTxt.text = "" + prize;
         }
     }
 }

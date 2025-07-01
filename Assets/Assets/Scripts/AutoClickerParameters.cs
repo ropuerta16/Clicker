@@ -2,15 +2,14 @@ using UnityEngine;
 
 public class AutoClickerParameters : MonoBehaviour
 {
-    private float CoolDown = 1f;
-
-    void Update()
+    private void Start()
     {
-        CoolDown -= Time.deltaTime;
-        if (CoolDown < 0 )
-        {
-            Score.Instance.score += AddScore.Instance.Clickvalue;
-            CoolDown = 1f;
-        }
+        InvokeRepeating("RepeatScore", 0f,1f);
+    }
+
+    private void RepeatScore()
+    {
+        Score.Instance.score += AddScore.Instance.Clickvalue;
+
     }
 }

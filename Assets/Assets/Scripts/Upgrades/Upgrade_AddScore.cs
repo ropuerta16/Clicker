@@ -6,7 +6,7 @@ public class Upgrade_AddScore : Upgrade
     public TextMeshProUGUI UpNameTxt;
     public TextMeshProUGUI UpPrizeTxt;
 
-    public void Start()
+    void Start()
     {
         UpNameTxt.text = name;
         UpPrizeTxt.text = "" + prize;

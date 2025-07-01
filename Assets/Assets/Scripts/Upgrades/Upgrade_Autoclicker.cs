@@ -2,6 +2,7 @@ using System.Drawing;
 using System.Xml.Linq;
 using TMPro;
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
 
 public class Upgrade_Autoclicker : Upgrade
 {
@@ -9,7 +10,9 @@ public class Upgrade_Autoclicker : Upgrade
     public TextMeshProUGUI UpNameTxt;
     public TextMeshProUGUI UpPrizeTxt;
 
-    public void Start()
+    public GameObject AutoclickerParent;
+
+    void Start()
     {
         UpNameTxt.text = name;
         UpPrizeTxt.text = "" + prize;
@@ -21,7 +24,10 @@ public class Upgrade_Autoclicker : Upgrade
         {
             Score.Instance.score -= prize;
 
-            Instantiate(Autoclicker, Vector3.zero, Quaternion.identity);
+            GameObject a = Instantiate(Autoclicker, AutoclickerParent.transform);
+
+            a.transform.position = new Vector3(2 * (AutoclickerParent.transform.childCount - 1), 0, 0);
+
             prize *= 2;
             UpPrizeTxt.text = "" + prize;
         }
